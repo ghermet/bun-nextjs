@@ -7,7 +7,7 @@
     "build": "bun --bun next build",
     "start": "bun --bun next start",
     "lint": "eslint",
-    "e2e:setup": "node -r dotenv/config ./scripts/anvil.mjs",
+    "e2e:setup": "anvil",
     "e2e:test": "playwright test",
     "e2e:test:ui": "playwright test --ui"
   },
