@@ -1,4 +1,3 @@
-// Import necessary Playwright and Synpress modules
 import { defineConfig, devices } from "@playwright/test";
 import "dotenv/config";
 
