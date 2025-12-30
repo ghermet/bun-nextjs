@@ -17,6 +17,8 @@ jobs:
       run: |
         # Download foundry installer `foundryup`
         curl -L https://foundry.paradigm.xyz | bash
+        # Source bash config
+        source /home/runner/.bashrc
         # Install forge, cast, anvil, chisel
         foundryup
     - name: Install Playwright Browsers
