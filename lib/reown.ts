@@ -1,5 +1,3 @@
-"use client";
-
 import { WagmiAdapter } from "@reown/appkit-adapter-wagmi";
 import { foundry, mainnet, sepolia } from "@reown/appkit/networks";
 import {
