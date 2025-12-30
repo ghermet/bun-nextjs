@@ -1,8 +1,6 @@
 // Import necessary Playwright and Synpress modules
 import { defineConfig, devices } from "@playwright/test";
-import { config } from "dotenv";
-
-config({ quiet: true });
+import "dotenv/config";
 
 // Define Playwright configuration
 export default defineConfig({
@@ -30,12 +28,12 @@ export default defineConfig({
   ],
   webServer: [
     {
-      command: "npm run e2e:setup",
+      command: "bun run e2e:setup",
       port: 8545,
       reuseExistingServer: !process.env.CI,
     },
     {
-      command: "npm run dev",
+      command: process.env.CI ? "bun start" : "bun dev",
       port: 3000,
       reuseExistingServer: !process.env.CI,
     },
