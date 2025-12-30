@@ -39,12 +39,6 @@ jobs:
     - name: Install Playwright Browsers 
       if: steps.cache-playwright-browsers-restore.outputs.cache-hit != 'true'
       run: bunx playwright install --with-deps
-    - name: Save Playwright Browsers 
-      id: cache-playwright-browsers-save
-      uses: actions/cache/save@v4
-      with:
-        path: /home/runner/.cache
-        key: ${{ steps.cache-playwright-browsers-restore.outputs.cache-primary-key }}
     - name: Run Playwright tests
       run: bun e2e:test
     - uses: actions/upload-artifact@v4
